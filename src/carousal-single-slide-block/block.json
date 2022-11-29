@@ -1,0 +1,14 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "create-block/carousal-single-slide-block",
+	"version": "0.1.0",
+	"title": "Single Slide",
+	"category": "widgets",
+	"icon": "welcome-add-page",
+	"description": "Add Slide Block",
+	"textdomain": "caraousal-slider-block",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

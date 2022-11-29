@@ -1,0 +1,63 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "create-block/caraousal-slider-block",
+  "version": "0.1.0",
+  "title": "Caraousal Slider Block",
+  "category": "widgets",
+  "icon": "slides",
+  "description": "This is Gutenberg Slider with slick slider used in backend.",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "slideToShow": {
+      "type": "integer",
+      "default": 1
+    },
+    "numberOfSlideToScroll": {
+      "type": "integer",
+      "default": 1
+    },
+    "sliderAnimationSpeed": {
+      "type": "integer",
+      "default": 400
+    },
+    "showSliderNextPrevArrow": {
+      "type": "boolean",
+      "default": true
+    },
+    "showDotsNavigation": {
+      "type": "boolean",
+      "default": true
+    },
+    "infiniteLoopSlider": {
+      "type": "boolean",
+      "default": false
+    },
+    "autoPlaySlider": {
+      "type": "boolean",
+      "default": true
+    },
+    "autoPlaySpeed": {
+      "type": "integer",
+      "default": 1000
+    },
+    "screenWidth": {
+      "type": "integer",
+      "default": 767
+    },
+    "slideToShowResponsive": {
+      "type": "integer",
+      "default": 1
+    },
+    "numberOfSlideToScrollResponsive": {
+      "type": "integer",
+      "default": 1
+    }
+  },
+  "textdomain": "caraousal-slider-block",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}
