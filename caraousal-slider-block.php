@@ -54,4 +54,3 @@ function add_slick_slider_scripts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'add_slick_slider_scripts' );
-// add_action( 'admin_enqueue_scripts', 'add_slick_slider_scripts' );
