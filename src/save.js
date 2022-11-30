@@ -28,7 +28,11 @@ export default function save( props ) {
 		'infinite': infiniteLoopSlider,
 	};
 
-	const blockProps = useBlockProps.save();
+	const dataSlickString = JSON.stringify( dataSlick );
+
+	const blockProps = useBlockProps.save( {
+		'data-slick': dataSlickString,
+	} );
 
 	return (
 		<div { ...blockProps }>

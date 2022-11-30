@@ -51,6 +51,13 @@ function add_slick_slider_scripts() {
 		'1.0.3',
 		true
 	);
+
+	wp_enqueue_style(
+		'slick-slider-css',
+		CARAOUSAL_SLIDER_BLOCK_URL . '/src/slick-slider/slick.min.css',
+		array(),
+		'1.1'
+	);
 }
 
 add_action( 'wp_enqueue_scripts', 'add_slick_slider_scripts' );
