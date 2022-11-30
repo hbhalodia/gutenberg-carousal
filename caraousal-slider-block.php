@@ -13,6 +13,9 @@
  * @package           create-block
  */
 
+define( 'CARAOUSAL_SLIDER_BLOCK_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) ) );
+define( 'CARAOUSAL_SLIDER_BLOCK_URL', untrailingslashit( plugin_dir_url( __FILE__ ) ) );
+
 /**
  * Registers the block using the metadata loaded from the `block.json` file.
  * Behind the scenes, it registers also all assets so they can be enqueued
@@ -25,3 +28,30 @@ function create_block_caraousal_slider_block_block_init() {
 	register_block_type( __DIR__ . '/build/carousal-single-slide-block' );
 }
 add_action( 'init', 'create_block_caraousal_slider_block_block_init' );
+
+/**
+ * Function to add slick slider scripts.
+ *
+ * @return void
+ */
+function add_slick_slider_scripts() {
+
+	wp_enqueue_script(
+		'slick-slider-script',
+		CARAOUSAL_SLIDER_BLOCK_URL . '/src/slick-slider/slick.min.js',
+		array( 'jquery' ),
+		'1.0.1',
+		true
+	);
+
+	wp_enqueue_script(
+		'carauosal-script',
+		CARAOUSAL_SLIDER_BLOCK_URL . '/src/frontend-slider.js',
+		array( 'jquery', 'slick-slider-script' ),
+		'1.0.3',
+		true
+	);
+}
+
+add_action( 'wp_enqueue_scripts', 'add_slick_slider_scripts' );
+// add_action( 'admin_enqueue_scripts', 'add_slick_slider_scripts' );
