@@ -1,9 +1,18 @@
 import { __ } from '@wordpress/i18n';
-import { InnerBlocks } from '@wordpress/block-editor';
+import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
 
 export default function Edit() {
 
+
+	const blockProps = useBlockProps( {
+		'data-type': 'gb-carousal-slide',
+	} );
+
 	return (
-		<InnerBlocks />
+		<div { ...blockProps } >
+			<InnerBlocks
+			/>
+		</div>
+
 	);
 }

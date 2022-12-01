@@ -67,6 +67,33 @@ export default function Edit( { attributes, setAttributes } ) {
 		setAttributes( { 'numberOfSlideToScrollResponsive': value } );
 	};
 
+	const responsive = [{
+		'breakpoint': screenWidth,
+		'settings': {
+			'slidesToShow': slideToShowResponsive,
+			'slidesToScroll': numberOfSlideToScrollResponsive,
+		},
+	}];
+
+	const dataSlick = {
+		'slidesToShow': slideToShow,
+		'slidesToScroll': numberOfSlideToScroll,
+		'speed': sliderAnimationSpeed,
+		'arrows': showSliderNextPrevArrow,
+		'dots': showDotsNavigation,
+		'autoplay': autoPlaySlider,
+		'autoplaySpeed': autoPlaySpeed,
+		'infinite': infiniteLoopSlider,
+		'adaptiveHeight': true,
+		responsive,
+	};
+
+	const dataSlickString = JSON.stringify( dataSlick );
+
+	const blockProps = useBlockProps( {
+		'data-slick': dataSlickString,
+	} );
+
 	const ALLOWED_BLOCKS = [
 		'create-block/carousal-single-slide-block',
 	];
@@ -162,8 +189,11 @@ export default function Edit( { attributes, setAttributes } ) {
 					/>
 				</PanelBody>
 			</InspectorControls>
-			<div { ...useBlockProps() }>
-				<InnerBlocks allowedBlocks={ ALLOWED_BLOCKS }/>
+			<div { ...blockProps }>
+				<InnerBlocks
+					allowedBlocks={ ALLOWED_BLOCKS }
+					renderAppender={ InnerBlocks.ButtonBlockAppender }
+				/>
 			</div>
 		</>
 	);

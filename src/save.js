@@ -17,6 +17,14 @@ export default function save( props ) {
 		numberOfSlideToScrollResponsive
 	} = attributes;
 
+	const responsive = [{
+		'breakpoint': screenWidth,
+		'settings': {
+			'slidesToShow': slideToShowResponsive,
+			'slidesToScroll': numberOfSlideToScrollResponsive,
+		},
+	}];
+
 	const dataSlick = {
 		'slidesToShow': slideToShow,
 		'slidesToScroll': numberOfSlideToScroll,
@@ -26,6 +34,8 @@ export default function save( props ) {
 		'autoplay': autoPlaySlider,
 		'autoplaySpeed': autoPlaySpeed,
 		'infinite': infiniteLoopSlider,
+		'adaptiveHeight': true,
+		responsive,
 	};
 
 	const dataSlickString = JSON.stringify( dataSlick );
