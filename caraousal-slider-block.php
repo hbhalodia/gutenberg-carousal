@@ -30,7 +30,7 @@ function create_block_caraousal_slider_block_block_init() {
 add_action( 'init', 'create_block_caraousal_slider_block_block_init' );
 
 /**
- * Function to add slick slider scripts.
+ * Function to add slick slider and frontend scripts.
  *
  * @return void
  */
@@ -46,7 +46,7 @@ function add_slick_slider_scripts() {
 
 	wp_enqueue_script(
 		'carauosal-script',
-		CARAOUSAL_SLIDER_BLOCK_URL . '/src/frontend-slider.js',
+		CARAOUSAL_SLIDER_BLOCK_URL . '/src/frontend-slider/frontend-slider.js',
 		array( 'jquery', 'slick-slider-script' ),
 		'1.0.3',
 		true
