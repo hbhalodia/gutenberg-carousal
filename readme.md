@@ -10,11 +10,11 @@
 
 ## Frontend
 
-![Frontend Image](/images/frontend.png)
+<img width="1438" alt="Screenshot 2022-12-01 at 11 30 20 AM" src="https://user-images.githubusercontent.com/58802366/204979514-d199a257-e77b-4342-8824-8964f451d18f.png">
 
 ## Backend
 
-![Editor Image](/images/editor.png)
+<img width="1438" alt="Screenshot 2022-12-01 at 11 30 39 AM" src="https://user-images.githubusercontent.com/58802366/204979540-729a511f-3f4e-4fde-a7ec-94183da66118.png">
 
 # Here is the Screencast for the same.
 
